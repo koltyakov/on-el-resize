@@ -34,7 +34,7 @@ resize.addResizeListener(element, resizeHandler);
 resize.removeResizeListener(element, resizeHandler);
 ```
 
-### React component
+### React component sample
 
 ```typescript
 import * as React from 'react';
@@ -82,6 +82,34 @@ export class Example extends React.Component<IProps, IState> {
       componentWidth: this.parentRef.offsetWidth,
       componentHeight: this.parentRef.offsetHeight
     });
+  }
+
+}
+```
+
+### React declarative approach
+
+> Component is a draft status
+
+```typescript
+import * as React from 'react';
+
+import { Resizable } from 'on-el-resize/lib/components';
+
+export default class Example extends React.Component<{}, {}> {
+
+  public render() {
+    return (
+      <Resizable
+        render={({ width }) => {
+          return (
+            <div>
+              <div>Width: {width}</div>
+            </div>
+          );
+        }}
+      />
+    );
   }
 
 }
