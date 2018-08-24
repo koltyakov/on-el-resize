@@ -1,5 +1,10 @@
 # on-el-resize - on HTML element resize event helper
 
+[![NPM](https://nodei.co/npm/on-el-resize.png?mini=true&downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/on-el-resize)
+
+[![npm version](https://badge.fury.io/js/on-el-resize.svg)](https://badge.fury.io/js/on-el-resize)
+[![Downloads](https://img.shields.io/npm/dm/on-el-resize.svg)](https://www.npmjs.com/package/on-el-resize)
+
 `on-el-resize` is a simple helper which provides an API for attaching resize event firing to HTML elements.
 
 This can simplify creation of some dynamic and responsive components which styles and structure depends on absolute width and height values.
