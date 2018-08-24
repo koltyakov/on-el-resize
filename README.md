@@ -7,7 +7,7 @@
 
 `on-el-resize` is a simple helper which provides an API for attaching resize event firing to HTML elements.
 
-This can simplify creation of some dynamic and responsive components which styles and structure depends on absolute width and height values.
+This can simplify creation of some dynamic and responsive components which styles and structure depend on absolute width and height values.
 
 ## Install
 
