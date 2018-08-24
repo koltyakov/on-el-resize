@@ -1,0 +1,33 @@
+{
+  "name": "on-el-resize",
+  "version": "0.0.1",
+  "description": "On HTML element resize event helper",
+  "main": "./dist/index.js",
+  "typings": "./dist/index",
+  "scripts": {
+    "build": "npm run tslint && rm -rf ./dist && tsc -p .",
+    "tslint": "tslint -p ."
+  },
+  "keywords": [
+    "html",
+    "resize",
+    "event",
+    "typescript",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koltyakov/on-el-resize.git"
+  },
+  "author": "Andrew Koltyakov <andrew.koltyakov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koltyakov/on-el-resize/issues"
+  },
+  "homepage": "https://github.com/koltyakov/on-el-resize#readme",
+  "devDependencies": {
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^7.1.0",
+    "typescript": "^3.0.1"
+  }
+}
