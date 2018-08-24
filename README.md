@@ -94,7 +94,7 @@ export class Example extends React.Component<IProps, IState> {
 
 ### React declarative approach
 
-> Component is a draft status
+> Component is in draft status
 
 ```typescript
 import * as React from 'react';
