@@ -41,9 +41,9 @@ export class Resize {
   }
 
   private requestFrame = (() => {
-    const rafFallback = (fn: Function) => window.setTimeout(fn, 20);
+    const rafFallback = (fn: () => void) => window.setTimeout(fn, 20);
     const raf = window.requestAnimationFrame || window['mozRequestAnimationFrame'] || window.webkitRequestAnimationFrame || rafFallback;
-    return (fn: Function) => raf(fn);
+    return (fn: () => void) => raf(fn);
   })();
 
   private cancelFrame = (() => {

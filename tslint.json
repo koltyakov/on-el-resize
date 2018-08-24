@@ -3,6 +3,8 @@
   "rules": {
     "semicolon": [true, "always", "ignore-interfaces"],
     "space-before-function-paren": false,
-    "trailing-comma": true
+    "trailing-comma": true,
+    "strict-type-predicates": false,
+    "no-unused-variable": null
   }
 }
