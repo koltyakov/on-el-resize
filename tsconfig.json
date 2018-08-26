@@ -4,7 +4,7 @@
     "module": "commonjs",
     "lib": ["es2017", "dom"],
     "jsx": "react",
-    "sourceMap": true,
+    "sourceMap": false,
     "declaration": true,
     "moduleResolution": "node",
     "noImplicitAny": false,
@@ -19,6 +19,6 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "lib"
   ]
 }
