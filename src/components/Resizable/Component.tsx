@@ -4,7 +4,7 @@ import { Resize } from '../../Resize';
 
 import { IProps, IState } from './interfaces';
 
-export default class Resizable extends React.Component<IProps, IState> {
+export default class Resizable extends React.Component<IProps & React.HTMLAttributes<HTMLDivElement>, IState> {
 
   private ref: HTMLElement;
   private resize: Resize;
@@ -20,7 +20,11 @@ export default class Resizable extends React.Component<IProps, IState> {
 
   public render() {
     return (
-      <div ref={el => this.ref = el}>
+      <div
+        className={this.props.className}
+        style={this.props.style}
+        ref={el => this.ref = el}
+      >
         {this.state.initiated &&
           this.props.render ? this.props.render({
             width: this.state.width,

@@ -7,11 +7,10 @@ export default class Example extends React.Component<{}, {}> {
   public render() {
     return (
       <Resizable
+        className='container'
         render={({ width }) => {
           return (
-            <div>
-              <div>Width: {width}</div>
-            </div>
+            <div>Width: {width}</div>
           );
         }}
       />
