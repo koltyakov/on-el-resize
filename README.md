@@ -105,15 +105,7 @@ export default class Example extends React.Component<{}, {}> {
 
   public render() {
     return (
-      <Resizable
-        render={({ width }) => {
-          return (
-            <div>
-              <div>Width: {width}</div>
-            </div>
-          );
-        }}
-      />
+      <Resizable render={({ width }) => <div>Width: {width}</div>} />
     );
   }
 
