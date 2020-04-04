@@ -26,10 +26,9 @@
   },
   "homepage": "https://github.com/koltyakov/on-el-resize#readme",
   "devDependencies": {
-    "@types/react": "^16.8.22",
-    "react": "^16.8.6",
-    "tslint": "^5.18.0",
-    "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.5.2"
+    "@types/react": "^16.9.32",
+    "react": "^16.13.1",
+    "tslint": "^6.1.1",
+    "typescript": "^3.8.3"
   }
 }

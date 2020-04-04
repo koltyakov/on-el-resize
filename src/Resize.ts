@@ -3,7 +3,7 @@ export class Resize {
   private attachEvent = document['attachEvent'];
   private isIE = navigator.userAgent.match(/Trident/);
 
-  public addResizeListener = (element: HTMLElement, fn: Function): void => {
+  public addResizeListener = (element: HTMLElement, fn: () => void): void => {
     if (!element['__resizeListeners__']) {
       element['__resizeListeners__'] = [];
       if (this.attachEvent) {
@@ -14,7 +14,7 @@ export class Resize {
         const obj = element['__resizeTrigger__'] = document.createElement('object');
         obj.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;');
         obj['__resizeElement__'] = element;
-        obj.onload = this.objectLoad.bind(this);
+        obj.onload = this.objectLoad; // .bind(this);
         obj.type = 'text/html';
         if (this.isIE) {
           element.appendChild(obj);
@@ -28,7 +28,7 @@ export class Resize {
     element['__resizeListeners__'].push(fn);
   }
 
-  public removeResizeListener = (element: HTMLElement, fn: Function): void => {
+  public removeResizeListener = (element: HTMLElement, fn: () => void): void => {
     element['__resizeListeners__'].splice(element['__resizeListeners__'].indexOf(fn), 1);
     if (!element['__resizeListeners__'].length) {
       if (this.attachEvent) {
@@ -48,7 +48,7 @@ export class Resize {
 
   private cancelFrame = (() => {
     const cancel = window.cancelAnimationFrame || window['mozCancelAnimationFrame'] || window.webkitCancelAnimationFrame || window.clearTimeout;
-    return id => cancel(id);
+    return (id) => cancel(id);
   })();
 
   private resizeListener = (e): void => {
